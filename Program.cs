@@ -15,6 +15,14 @@ Console.WriteLine("Hello, World!");
 //Decodes: Converts bytes back into a string.
 
 
+
+//Encoding Type	Description
+//Encoding.ASCII	Encodes characters using 7-bit ASCII. Limited to basic English characters.
+//Encoding.UTF8	Variable-length encoding for Unicode. Most popular for web and APIs.
+//Encoding.Unicode	Uses UTF-16. Default internal encoding in .NET.
+//Encoding.UTF32	Fixed-length encoding for Unicode. Less common, but useful for some cases.
+
+
 string stringToEncode = "Hello";
 // Encoded Steps
 byte[] strbyte =  Encoding.UTF8.GetBytes(stringToEncode); // Convert string to byte array;
@@ -27,5 +35,6 @@ byte[] bytearrfromBase64string =  Convert.FromBase64String(encodedString);  // C
 string decodedstring = Encoding.UTF8.GetString(bytearrfromBase64string);    // Getstring from byte array.
 
 Console.Read();
+
 
 
